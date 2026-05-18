@@ -82,21 +82,6 @@ The topology score is **84 (HIGH)**. Propagation index is **0.72 (ELEVATED)**. 1
 
 ![Terminal Feed](./ScreenShots/Terminal.png)
 
-```
-[MuleNetX] API server listening on http://localhost:5000
-[MuleNetX] Graph engine initialized
-[MuleNetX] Loading datasets...
-[MuleNetX] 11,842 transactions ingested
-[MuleNetX] 2,314 entities mapped
-[MuleNetX] Topology projection complete
-[MuleNetX] Risk engine online
-[MuleNetX] Event stream connected
-
-[2026-05-18 20:51:01] [ALERT] High risk transfer detected: ACC-8842 -> ACC-9921 | Amount: ₹4,80,000 | Risk: 94
-[2026-05-18 20:51:03] [EVENT] New cluster formed: Cluster_17 | Nodes: 14 | Risk Score: 87
-[2026-05-18 20:51:05] [ALERT] Anomaly pattern matched: Layering Ring v2.1 | Confidence: 0.86
-```
-
 ---
 
 ## System Architecture
