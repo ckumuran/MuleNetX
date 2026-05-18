@@ -44,7 +44,7 @@ MuleNetX is a graph-powered intelligence dashboard that makes these shapes visib
 
 > Geographic risk distribution across states, visualized as a heat-graded chloropleth with live alert feeds and per-state drill-down.
 
-![India Heatmap Dashboard](./screenshots/Dashboard.jpeg)
+![India Heatmap Dashboard](./ScreenShots/Dashboard.jpeg)
 
 Suspicious volume of **₹1.3Cr** tracked across **11,842 accounts** and **23,761 transactions**. Maharashtra leads by volume at ₹28.5L. Tamil Nadu sits at a risk score of 73/100 — 17 accounts, 4 active cases, ₹7.4L in flagged volume. The map encodes risk density through color; the panels encode operational context through data.
 
@@ -54,7 +54,7 @@ Suspicious volume of **₹1.3Cr** tracked across **11,842 accounts** and **23,76
 
 > The visual center of the system. 152 nodes, 421 edges, rendered as a live force-directed graph with real-time risk propagation and cluster detection.
 
-![Graph Explorer](./screenshots/GraphDB.jpeg)
+![Graph Explorer](./ScreenShots/GraphDB.jpeg)
 
 The topology score is **84 (HIGH)**. Propagation index is **0.72 (ELEVATED)**. 14 active clusters, network density at 0.037. The graph isn't decorative — every node position, edge weight, and color encodes a structural fact about the transaction network. Red is high-risk, orange is medium, green is low. The selected node (ACC-8842, risk score 94) shows ₹4,50,000 inflow against ₹7,35,000 outflow across 47 connections — structurally consistent with a layering intermediary.
 
@@ -64,7 +64,7 @@ The topology score is **84 (HIGH)**. Propagation index is **0.72 (ELEVATED)**. 1
 
 > Active investigation tracking with risk score breakdown, fraud typology classification, and investigator assignment.
 
-![Cases Overview](./screenshots/Case.jpeg)
+![Cases Overview](./ScreenShots/Case.jpeg)
 
 247 total cases — 23 high-risk, 68 under investigation, 156 closed. Layering is the dominant typology at 36%, followed by structuring at 25.1%. The case table surfaces the highest-priority items with enough context (risk score, investigator, last activity, fraud type) to triage without opening anything. The risk score distribution bar at the bottom is visual triage.
 
@@ -74,7 +74,7 @@ The topology score is **84 (HIGH)**. Propagation index is **0.72 (ELEVATED)**. 1
 
 > Case and alert trends over time, fraud type distribution, alert reason breakdown, and resolution performance metrics.
 
-![Analytics Dashboard](./screenshots/Analysis.jpeg)
+![Analytics Dashboard](./ScreenShots/Analysis.jpeg)
 
 47 total cases, 156 alerts generated, 29 high-risk alerts. False positive rate at 8.6% — down 2.4% from the previous period. Average resolution time 18.4h, down 15%. Layering transactions are the top alert driver at 26.9%, followed by large cash deposits and structuring. The charts show daily granularity across a 30-day window; the performance summary shows period-over-period delta.
 
@@ -84,7 +84,7 @@ The topology score is **84 (HIGH)**. Propagation index is **0.72 (ELEVATED)**. 1
 
 > Real-time streaming log of system events, alerts, and graph engine activity — the operational layer made visible.
 
-![Terminal Feed](./screenshots/Terminal.png)
+![Terminal Feed](./ScreenShots/Terminal.png)
 
 ```
 [MuleNetX] API server listening on http://localhost:5000
@@ -144,7 +144,7 @@ The architecture is deliberately layered. The frontend is concerned with renderi
 
 ---
 
-## Graph Theory
+## Graph Theory, Applied
 
 Financial crime networks have structure. Understanding that structure requires a vocabulary.
 
@@ -327,6 +327,52 @@ mulenetx/
 
 ---
 
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Python 3.10+
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/Kumaranshub/MuleNetX.git
+cd MuleNetX
+```
+
+**Start the API server:**
+```bash
+cd api
+npm install
+node server.js
+# API server listening on http://localhost:5000
+```
+
+**Run the analysis pipeline (optional — pre-scored data is included):**
+```bash
+cd analysis
+pip install -r requirements.txt
+python anomaly_scan.py
+python risk_score.py
+```
+
+**Start the frontend:**
+```bash
+cd dashboard
+npm install
+npm run dev
+# Dashboard running on http://localhost:5173
+```
+
+### Docker (Full Stack)
+
+```bash
+cp .env.example .env
+docker-compose up --build
+```
+
 ---
 
 ## Technical Philosophy
@@ -345,6 +391,8 @@ Nothing is decorative that isn't also functional. And the functional things are 
 
 ## Contributors
 
+Built by engineers who probably should've gone outside more:
+
 | Contributor | GitHub |
 |-------------|--------|
 | **Kumaran** | [@Kumaranshub](https://github.com/Kumaranshub) |
@@ -353,5 +401,17 @@ Nothing is decorative that isn't also functional. And the functional things are 
 | **Tawheed** | [@twhdd1201](https://github.com/twhdd1201) |
 
 ---
+
+## License
+
+MIT — build on it, break it, make it better.
+
+---
+
+<div align="center">
+
+*MuleNetX exists because we wanted to understand what financial crime looks like when you turn it into a graph — and then render that graph with enough care that it communicates something true about the structure beneath it.*
+
+*We built something that looks like an intelligence tool because we were trying to think like one.*
 
 </div>
