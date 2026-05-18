@@ -5,7 +5,7 @@ body,
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background: #000000;
+  background: #000;
 }
 
 * {
@@ -13,54 +13,14 @@ body,
 }
 
 body {
-  font-family: "JetBrains Mono", monospace;
-  color: #d8d8d8;
+  margin: 0;
   background: #000;
-  text-shadow: 0 0 4px rgba(255,255,255,0.04);
+  font-family: "JetBrains Mono", monospace;
 }
 
-.scanlines {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-
-  background-image: linear-gradient(
-    transparent 50%,
-    rgba(255,255,255,0.015) 50%
-  );
-
-  background-size: 100% 4px;
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 0.98;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.97;
-  }
-}
-
-#root {
-  animation: flicker 0.12s infinite;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: #080808;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1d1d1d;
+button,
+input {
+  outline: none;
 }
 
 @keyframes spin {
