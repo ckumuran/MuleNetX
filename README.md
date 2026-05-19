@@ -50,7 +50,7 @@ Suspicious volume of **₹1.3Cr** tracked across **11,842 accounts** and **23,76
 
 > The visual center of the system. 152 nodes, 421 edges, rendered as a live force-directed graph with real-time risk propagation and cluster detection.
 
-![Graph Explorer](./ScreenShots/GraphDB.jpeg)
+![Graph Explorer](./ScreenShots/GraphDB.png)
 
 The topology score is **84 (HIGH)**. Propagation index is **0.72 (ELEVATED)**. 14 active clusters, network density at 0.037. The graph isn't decorative — every node position, edge weight, and color encodes a structural fact about the transaction network. Red is high-risk, orange is medium, green is low. The selected node (ACC-8842, risk score 94) shows ₹4,50,000 inflow against ₹7,35,000 outflow across 47 connections — structurally consistent with a layering intermediary.
 
