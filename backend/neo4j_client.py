@@ -1,24 +1,19 @@
-from neo4j import GraphDatabase
-from backend.config import settings
+from backend.core.query_guard import (
+    validate_query
+)
 
 
-class Neo4jClient:
+def execute(
+    self,
+    query,
+    parameters=None
+):
 
-    def __init__(self):
-        self.driver = GraphDatabase.driver(
-            settings.neo4j_uri,
-            auth=(
-                settings.neo4j_username,
-                settings.neo4j_password
-            )
+    validate_query(query)
+
+    with self.driver.session() as session:
+
+        return session.run(
+            query,
+            parameters or {}
         )
-
-    def close(self):
-        self.driver.close()
-
-    def execute(self, query, parameters=None):
-        with self.driver.session() as session:
-            return session.run(query, parameters or {})
-
-
-neo4j_client = Neo4jClient()
