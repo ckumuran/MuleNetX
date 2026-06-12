@@ -162,7 +162,6 @@ MuleNetX is not a complete AML system. It does not handle all fraud typologies. 
 
 ```
 MuleNetX/
-├── assets/                    # Static assets: diagrams, screenshots, sample outputs
 ├── backend/                   # FastAPI application server
 │   ├── api/                   # Route handlers, organized by domain
 │   │   ├── graph.py           # Graph query endpoints
