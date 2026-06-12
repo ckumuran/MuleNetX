@@ -1,7 +1,7 @@
 import SystemOverview from "./components/SystemOverview";
 import RiskLeaderboard from "./components/RiskLeaderboard";
 import CommunityExplorer from "./components/CommunityExplorer";
-import GraphInvestigation from "./components/GraphInvestigation";
+import GraphCanvas from "./components/GraphCanvas";
 import InvestigationWorkspace from "./components/InvestigationWorkspace";
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
 
             <CommunityExplorer />
 
-            <GraphInvestigation />
+            <GraphCanvas />
 
             <InvestigationWorkspace />
 
