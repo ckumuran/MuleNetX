@@ -1,5 +1,9 @@
 from pathlib import Path
 
+from backend.core.hash_report import (
+    report_hash
+)
+
 from reportlab.platypus import (
     SimpleDocTemplate,
     Paragraph,
